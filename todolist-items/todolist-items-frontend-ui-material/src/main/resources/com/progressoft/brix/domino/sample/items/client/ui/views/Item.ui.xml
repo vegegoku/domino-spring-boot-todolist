@@ -1,0 +1,23 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:m='urn:import:gwt.material.design.client.ui'
+>
+    <ui:style gss="true">
+        .item{
+            margin : 5px !important;
+            border : 1px solid #cfcfcf;
+        }
+
+        .testBold {
+            font-weight: bold;
+        }
+    </ui:style>
+
+    <m:MaterialCollectionItem type="AVATAR" shadow="1" addStyleNames="{style.item}">
+        <m:MaterialLabel ui:field="titleField" fontSize="1.8em" addStyleNames="{style.testBold}"/>
+        <m:MaterialLabel ui:field="descriptionField"/>
+        <m:MaterialCollectionSecondary>
+            <m:MaterialCheckBox ui:field="selector" value="false" type="FILLED"/>
+        </m:MaterialCollectionSecondary>
+    </m:MaterialCollectionItem>
+
+</ui:UiBinder>

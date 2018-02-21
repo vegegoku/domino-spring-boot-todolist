@@ -1,0 +1,32 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:m='urn:import:gwt.material.design.client.ui'
+>
+
+    <ui:style gss="true">
+
+    </ui:style>
+
+    <m:MaterialPanel>
+        <m:MaterialHeader ui:field="header">
+            <m:MaterialNavBar activates="sidenavPush" backgroundColor="BLUE" shadow="1">
+                <m:MaterialNavBrand paddingLeft="60" text="To-Do List" />
+            </m:MaterialNavBar>
+        </m:MaterialHeader>
+
+        <m:MaterialSideNavPush m:id="sidenavPush" ui:field="sideNav" width="300">
+
+        </m:MaterialSideNavPush>
+
+        <m:MaterialContainer>
+            <m:MaterialRow textAlign="CENTER" paddingTop="120">
+                <m:MaterialContainer ui:field="mainContent">
+
+                </m:MaterialContainer>
+                <m:MaterialFAB>
+                    <m:MaterialButton ui:field="newItemButton" type="FLOATING" href="" target="_blank" backgroundColor="PINK" size="LARGE" iconType="ADD" />
+                </m:MaterialFAB>
+            </m:MaterialRow>
+        </m:MaterialContainer>
+    </m:MaterialPanel>
+
+</ui:UiBinder>

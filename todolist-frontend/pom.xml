@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.progressoft.brix.domino.sample</groupId>
+        <artifactId>domino-todolist</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>todolist-frontend</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>gwt-app</packaging>
+
+    <properties>
+        <extra.directory>${project.build.directory}/${project.build.finalName}/app</extra.directory>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.api</groupId>
+            <artifactId>domino-api-shared</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.api</groupId>
+            <artifactId>domino-api-shared</artifactId>
+            <classifier>sources</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.impl</groupId>
+            <artifactId>domino-gwt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.impl</groupId>
+            <artifactId>domino-gwt</artifactId>
+            <classifier>sources</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.api</groupId>
+            <artifactId>domino-api-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.api</groupId>
+            <artifactId>domino-api-client</artifactId>
+            <classifier>sources</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.progressoft.brix.domino.sample</groupId>
+            <artifactId>todolist-layout-frontend</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.sample</groupId>
+            <artifactId>todolist-layout-frontend</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <classifier>sources</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.progressoft.brix.domino.sample</groupId>
+            <artifactId>todolist-layout-shared</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.sample</groupId>
+            <artifactId>todolist-layout-shared</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <classifier>sources</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.progressoft.brix.domino.sample</groupId>
+            <artifactId>todolist-items-frontend</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.sample</groupId>
+            <artifactId>todolist-items-frontend</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <classifier>sources</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.progressoft.brix.domino.sample</groupId>
+            <artifactId>todolist-items-shared</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.progressoft.brix.domino.sample</groupId>
+            <artifactId>todolist-items-shared</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <classifier>sources</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin.polymer</groupId>
+            <artifactId>vaadin-gwt-polymer-elements</artifactId>
+            <version>1.9.4.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <configuration>
+                    <extra>${extra.directory}/gwt/extra</extra>
+                    <moduleName>com.progressoft.brix.domino.sample.AppClientModule</moduleName>
+                    <moduleShortName>app</moduleShortName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>ui-material</id>
+            <activation>
+            <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.progressoft.brix.domino.sample</groupId>
+                    <artifactId>todolist-layout-frontend-ui-material</artifactId>
+                    <version>1.0-SNAPSHOT</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.progressoft.brix.domino.sample</groupId>
+                    <artifactId>todolist-layout-frontend-ui-material</artifactId>
+                    <version>1.0-SNAPSHOT</version>
+                    <classifier>sources</classifier>
+                </dependency>
+
+                <dependency>
+                    <groupId>com.progressoft.brix.domino.sample</groupId>
+                    <artifactId>todolist-items-frontend-ui-material</artifactId>
+                    <version>1.0-SNAPSHOT</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.progressoft.brix.domino.sample</groupId>
+                    <artifactId>todolist-items-frontend-ui-material</artifactId>
+                    <version>1.0-SNAPSHOT</version>
+                    <classifier>sources</classifier>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+</project>

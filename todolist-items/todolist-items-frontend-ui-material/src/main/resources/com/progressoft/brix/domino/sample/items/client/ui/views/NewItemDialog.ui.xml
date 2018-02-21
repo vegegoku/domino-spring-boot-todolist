@@ -1,0 +1,20 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:m='urn:import:gwt.material.design.client.ui'
+>
+
+    <ui:style gss="true">
+
+    </ui:style>
+
+    <m:MaterialModal ui:field="modal" type="DEFAULT" dismissible="false" inDuration="300" outDuration="300">
+        <m:MaterialModalContent>
+            <m:MaterialTextBox ui:field="titleField" label="Title"/>
+            <m:MaterialTextArea ui:field="descriptionField" label="Description"/>
+        </m:MaterialModalContent>
+        <m:MaterialModalFooter>
+            <m:MaterialButton text="Add" type="FLAT" ui:field="addButton"/>
+            <m:MaterialButton text="Cancel" type="FLAT" ui:field="cancelButton"/>
+        </m:MaterialModalFooter>
+    </m:MaterialModal>
+
+</ui:UiBinder>

@@ -1,0 +1,9 @@
+#!/bin/bash
+mvn archetype:generate \
+   -DarchetypeGroupId=com.progressoft.brix.domino.archetypes \
+   -DarchetypeArtifactId=domino-gwt-module-archetype \
+   -DarchetypeVersion=1.0-rc.2-SNAPSHOT \
+   -DgroupId=com.progressoft.brix.domino.sample \
+   -DartifactId=$1 \
+   -Dmodule=$2 \
+   -Dsubpackage=$3
