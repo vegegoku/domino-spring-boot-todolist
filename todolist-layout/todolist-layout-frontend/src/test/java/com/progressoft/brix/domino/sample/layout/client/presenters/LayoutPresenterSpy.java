@@ -4,7 +4,7 @@ import com.progressoft.brix.domino.api.shared.extension.MainContext;
 import com.progressoft.brix.domino.sample.layout.client.views.LayoutView;
 import com.progressoft.brix.domino.sample.layout.shared.extension.LayoutContext;
 
-public class LayoutPresenterSpy extends DefaultLayoutPresenter{
+public class LayoutPresenterSpy extends LayoutPresenter {
 
     private MainContext mainContext;
     public boolean receivedCreateEvent;
@@ -28,7 +28,7 @@ public class LayoutPresenterSpy extends DefaultLayoutPresenter{
 
     @Override
     protected String getConcrete() {
-        return DefaultLayoutPresenter.class.getCanonicalName();
+        return LayoutPresenter.class.getCanonicalName();
     }
 
     public LayoutContext getLayoutContext() {

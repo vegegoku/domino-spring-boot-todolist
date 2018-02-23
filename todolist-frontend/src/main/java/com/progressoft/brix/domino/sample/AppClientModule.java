@@ -1,6 +1,7 @@
 package com.progressoft.brix.domino.sample;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
 import com.progressoft.brix.domino.api.client.ClientApp;
 
 import java.util.logging.Logger;
@@ -11,7 +12,9 @@ public class AppClientModule implements EntryPoint {
 
     public void onModuleLoad() {
         LOGGER.info("todo-list Application frontend have been initialized.");
-        ClientApp.make().run();
+        ClientApp.make().run(dominoOptions -> {
+            dominoOptions.setDefaultServiceRoot(GWT.getModuleBaseURL().replace("app","service"));
+        });
 
     }
 }

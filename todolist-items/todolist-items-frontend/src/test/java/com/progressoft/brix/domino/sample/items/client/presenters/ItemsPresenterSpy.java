@@ -6,7 +6,7 @@ import com.progressoft.brix.domino.sample.layout.shared.extension.LayoutContext;
 
 import java.util.List;
 
-public class ItemsPresenterSpy extends DefaultItemsPresenter{
+public class ItemsPresenterSpy extends ItemsPresenter {
 
     private LayoutContext layoutContext;
 
@@ -26,7 +26,7 @@ public class ItemsPresenterSpy extends DefaultItemsPresenter{
 
     @Override
     protected String getConcrete() {
-        return DefaultItemsPresenter.class.getCanonicalName();
+        return ItemsPresenter.class.getCanonicalName();
     }
 
     public LayoutContext getLayoutContext() {
